@@ -24,7 +24,7 @@ const Hero = () => {
         loop
         playsInline
       >
-        <source src="src/assets/FINAL AICVS HOME PAGE VIDEO.mp4" type="video/mp4" />
+        <source src="/videos/FINAL AICVS HOME PAGE VIDEO (1).mp4" type="video/mp4" />
       </video>
 
       {/* Mobile Video */}
@@ -36,7 +36,7 @@ const Hero = () => {
         loop
         playsInline
       >
-        <source src="src\assets\Mobile_Video.mp4" type="video/mp4" />
+        <source src="/videos/Mobile_Video (1).mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/20"></div>

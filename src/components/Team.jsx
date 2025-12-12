@@ -8,7 +8,7 @@ const MOCK_TEAM_DATA = [
     title: "Sharvi Burse",
     text: "Co-Head Coordinator",
     details: "Optimizing potential, like fine-tuning hyperparameters.",
-    imageUrl: "src/assets/Sharvi.jpg",
+    imageUrl: "/images/Sharvi.jpg",
     supportTeam: [],
     year: "2025-2026",
     isCoHead: true
@@ -18,7 +18,7 @@ const MOCK_TEAM_DATA = [
     title: "Mira Vadjikar",
     text: "Co-Head Coordinator",
     details: "Brain full of algorithms, heart full of ideas.",
-    imageUrl: "src/assets/Mira.jpg",
+    imageUrl: "/images/Mira.jpg",
     supportTeam: [],
     year: "2025-2026",
     isCoHead: true
@@ -30,12 +30,12 @@ const MOCK_TEAM_DATA = [
     title: "Vedika Kayangude",
     text: "Website Development Team Lead",
     details: "Leading the web frontier with passion, precision and pixels.",
-    imageUrl: "src/assets/Vedika.jpg",
+    imageUrl: "/images/Vedika.jpg",
     supportTeam: [
-      "Jahnavi Singh", 
-      "Gautami Kulkarni", 
-      "Mahi Mahalle", 
-      "Arushi Dhawale", 
+      "Jahnavi Singh",
+      "Gautami Kulkarni",
+      "Mahi Mahalle",
+      "Arushi Dhawale",
       "Vaishnavi Karve"
     ],
     year: "2025-2026",
@@ -46,24 +46,24 @@ const MOCK_TEAM_DATA = [
     title: "Shreeya Chavan",
     text: "Technical Team Lead",
     details: "Predicting the future isn't magic, It's artificial intelligence.",
-    imageUrl: "src/assets/Shreeya.jpg",
+    imageUrl: "/images/Shreeya.jpg",
     supportTeam: [
       "Khushi Varma",
-      "Gauri Patil", 
-      "Asmita Wattamwar", 
-      "Sneha Maslekar", 
-      "Komal Sikchi", 
+      "Gauri Patil",
+      "Asmita Wattamwar",
+      "Sneha Maslekar",
+      "Komal Sikchi",
       "Samruddhi Dargode"
     ],
     year: "2025-2026",
     isCoHead: false
   },
-   {
+  {
     id: "11",
     title: "Bhakti Chaudhari",
     text: "Content and Design Team Lead",
     details: "Giving ideas their face.",
-    imageUrl: "src/assets/Bhakti.jpg",
+    imageUrl: "/images/Bhakti.jpg",
     supportTeam: [
       "Aditi Singnurkar",
       "Radha Kulkarni",
@@ -82,7 +82,7 @@ const MOCK_TEAM_DATA = [
     title: "Aadya Singh",
     text: "PR and Sponsorship Team Lead",
     details: "Has a pitch ready for every pause in the conversation.",
-    imageUrl: "src/assets/Aadya.jpg",
+    imageUrl: "/images/Aadya.jpg",
     supportTeam: [
       "Sharvari Ughade",
       "Ritisha Mangesh Satpute",
@@ -99,7 +99,6 @@ const MOCK_TEAM_DATA = [
     year: "2025-2026",
     isCoHead: false
   },
- 
 
   // AY 2024-2025 Team - Co-Heads
   {
@@ -107,8 +106,8 @@ const MOCK_TEAM_DATA = [
     title: "Ishita Lele",
     text: "Co-Head Coordinator",
     details: "Ishita handles high-level coordination and strategic alignment across all department heads, ensuring smooth communication and resource allocation for major initiatives.",
-    imageUrl: "src/assets/ishita.png",
-    supportTeam: [], 
+    imageUrl: "/images/ishita.png",
+    supportTeam: [],
     year: "2024-2025",
     isCoHead: true
   },
@@ -117,8 +116,8 @@ const MOCK_TEAM_DATA = [
     title: "Isha Bhagat",
     text: "Co-Head Coordinator",
     details: "Isha is responsible for overall operational management, tracking team metrics, managing budgets, and handling essential administrative oversight.",
-    imageUrl: "src/assets/isha.png",
-    supportTeam: [], 
+    imageUrl: "/images/isha.png",
+    supportTeam: [],
     year: "2024-2025",
     isCoHead: true
   },
@@ -129,7 +128,7 @@ const MOCK_TEAM_DATA = [
     title: "Kruti Newalkar",
     text: "Website Development Team Lead",
     details: "Kruti leads the web development team, overseeing the architecture, UI/UX implementation, and deployment of all user-facing applications.",
-    imageUrl: "src/assets/kruti.png",
+    imageUrl: "/images/kruti.png",
     supportTeam: ["Sameeksha Tantak", "Vedika Kayangude", "Sanika Shidore", "Shraddha Sabde", "Akshata Ramgiri"],
     year: "2024-2025",
     isCoHead: false
@@ -139,7 +138,7 @@ const MOCK_TEAM_DATA = [
     title: "Varada Gokhale",
     text: "Technical Team Lead",
     details: "Varada manages the overall technical direction, ensuring implementation of engineering best practices, code quality, and integration across all projects.",
-    imageUrl: "src/assets/varada.png",
+    imageUrl: "/images/varada.png",
     supportTeam: ["Aastha Ingle", "Nandini Pathak", "Mira Vadjikar", "Saniya Karambelkar", "Siddhi Faizpurkar"],
     year: "2024-2025",
     isCoHead: false
@@ -149,7 +148,7 @@ const MOCK_TEAM_DATA = [
     title: "Yashita Killedar",
     text: "Content and Design Team Lead",
     details: "Yashita coordinates all creative assets, ensuring content strategy aligns with brand guidelines and manages the visual design of all promotional materials and platforms.",
-    imageUrl: "src/assets/yashita.png",
+    imageUrl: "/images/yashita.png",
     supportTeam: ["Nidhi Patil", "Anjali Patel", "Tanvi Shirwadkar", "Anvi Shelar", "Anoushka Wadyalkar", "Nainsee Khade"],
     year: "2024-2025",
     isCoHead: false
@@ -159,12 +158,13 @@ const MOCK_TEAM_DATA = [
     title: "Siya Shah",
     text: "PR and Sponsorship Team Lead",
     details: "Siya drives external relations, manages media outreach, and secures strategic partnerships and sponsorships to support the team's operational needs.",
-    imageUrl: "src/assets/siya.png",
+    imageUrl: "/images/siya.png",
     supportTeam: ["Kavya Thacker", "Ananya Dani", "Akshata Lolge", "Aadya Singh", "Shreeya Chavan", "Advika Khorgade", "Arya Patekhede", "Sukhada Bhagwat", "Shreya Babar", "Garima Kardbhajane"],
     year: "2024-2025",
     isCoHead: false
   },
 ];
+
 
 
 const MemberModal = ({ member, onClose }) => {

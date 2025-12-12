@@ -199,7 +199,7 @@ const Register = () => {
 
                     <div>
                       <h3 className="text-white font-bold text-lg">Kaggle Competition</h3>
-                      <p className="text-purple-100 text-sm">18th–30th December 2025</p>
+                      <p className="text-purple-100 text-sm">18th December 2025</p>
                       <p className="text-purple-200 text-xs">
                         Work with real-world data, build models, compete & learn.
                       </p>

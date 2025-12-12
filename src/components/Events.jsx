@@ -22,14 +22,13 @@ const Events = () => {
         <Section className="overflow-hidden" id="pricing">
           <div className="container relative z-2">
 
-            <h1
-              className="text-center text-4xl md:text-6xl font-extrabold mb-4 
-                bg-gradient-to-r from-purple-300 via-purple-500 to-purple-700
-                text-transparent bg-clip-text tracking-wide uppercase"
-            >
-              EVENTS
-            </h1>
-
+               <h1
+  className="text-center text-4xl md:text-6xl font-extrabold mb-4 mt-16 
+    bg-gradient-to-r from-purple-300 via-purple-500 to-purple-700
+    text-transparent bg-clip-text tracking-wide uppercase"
+>
+  EVENTS
+</h1>
             <p className="text-center text-lg md:text-2xl font-medium text-purple-200">
               Dive into every event organized by AICVS — tech sessions, workshops, hackathons, and more.
             </p>

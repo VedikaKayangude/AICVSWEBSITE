@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
-import kagglePoster from "../assets/kaggle.jpg";
+import kagglePoster from "../assets/Pre - Kaggle Poster.png";
 import BackgroundLayout from "./BackgroundLayout";
 import { Trophy, Calendar, Clock, BookOpen, Github, ExternalLink } from "lucide-react";
 
@@ -141,7 +141,7 @@ const Register = () => {
                   <div className="relative bg-gradient-to-br from-purple-900/50 to-cyan-900/50 rounded-2xl border-2 border-purple-400/60 p-4 w-full shadow-[0_0_30px_rgba(168,85,247,0.4)]">
                     <div className="rounded-xl overflow-hidden shadow-[0_0_40px_rgba(168,85,247,0.6)] w-full ring-2 ring-purple-500/30">
                       <img
-                        src={Pre - Kaggle Poster}
+                        src={kagglePoster}
                         alt="Kaggle 2025 Poster"
                         className="w-full h-full object-cover"
                       />

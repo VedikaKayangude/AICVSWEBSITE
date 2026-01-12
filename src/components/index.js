@@ -54,6 +54,12 @@ export const navigation = [
     title: "Team",
     url: "#",
   },
+  {
+  id: "4",
+  title: "Winners",
+  url: "/winners",
+},
+
 
 ];
 

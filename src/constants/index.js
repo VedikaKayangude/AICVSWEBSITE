@@ -69,34 +69,13 @@ import workshopthumbnail from "../assets/workshop-thumbnail.jpg";
 
 
 export const navigation = [
-  {
-    id: "0",
-    title: "Home",
-    url: "/",
-  },
-  {
-    id: "1",
-    title: "Events",
-    url: "/events",
-  },
-  {
-    id: "2",
-    title: "Blogs",
-    url: "/blogs",
-  },
-  {
-    id: "3",
-    title: "Team",
-    url: "/team",
-  },
-  {
-    id: "4",
-    title: "Register",
-    url: "/register",
-  },
-
+  { id: "0", title: "Home", url: "/" },
+  { id: "1", title: "Events", url: "/events" },
+  { id: "2", title: "LeaderBoard", url: "/winners" },
+  { id: "3", title: "Blogs", url: "/blogs" },
+  { id: "4", title: "Team", url: "/team" },
+  { id: "5", title: "Register", url: "/register" },
 ];
-
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];

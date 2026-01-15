@@ -35,32 +35,17 @@ const Header = () => {
     openNavigation ? "bg-n-8" : "bg-transparent"
   }`}
 >
-   <div className="flex items-center justify-between px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-
-      <a
-  className="flex items-center w-[4rem] mr-6 flex-shrink-0"
-  href="/"
->
-  <img
-    className="rounded-full h-[48px] w-[48px]"
-    src={brainwave}
-    alt="AICVS"
-  />
-</a>
-
+    <div className="flex px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+      <a className="block w-[12rem] xl:mr-8" href="#hero">
+        <img className="rounded-full mt-2 mx-auto lg:my-5 h-[50px] w-[50px]" src={brainwave} width={80} height={80} alt="AICVS" />
+      </a>
 
       <nav
-  className={`${
-    openNavigation ? "flex" : "hidden"
-  } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8
-  lg:static lg:flex lg:flex-1 lg:ml-15 lg:justify-start lg:bg-transparent`}
->
-
-
-
-<div className="relative z-2 flex flex-col items-center justify-center gap-6 lg:gap-6
- lg:flex-row lg:justify-start">
-
+        className={`${
+          openNavigation ? "flex" : "hidden"
+        } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+      >
+        <div className="relative z-2 flex flex-col items-center justify-center -translate-x-[10%] gap-8 m-auto lg:flex-row">
           {navigation.map((item) => (
             <a
               key={item.id}
@@ -83,7 +68,7 @@ const Header = () => {
       </nav>
 
       <Button
-        className="lg:hidden"
+        className="ml-auto lg:hidden"
         onClick={toggleNavigation}
       >
         <MenuSvg openNavigation={openNavigation} />

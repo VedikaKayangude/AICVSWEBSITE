@@ -10,19 +10,19 @@ import BackgroundLayout from "./BackgroundLayout";
 ======================= */
 const winnersData = {
   FY: {
-    gold: "Aarav Sharma",
-    silver: "Neha Kulkarni",
+    gold: "Shruti Govilkar",
+    silver: "Tanvi Nikam",
     bronze: "Rohan Patil",
   },
   SY: {
-    gold: "Ananya Deshpande",
-    silver: "Siddharth Joshi",
-    bronze: "Pooja Kulkarni",
+    gold: "Anushkaa Pawar",
+    silver: "Ishwari Rautray",
+    bronze: "Cheryl Varghese",
   },
   TY: {
-    gold: "Aditya Mahajan",
-    silver: "Isha Mehta",
-    bronze: "Kunal Shah",
+    gold: "Ishanvi M.",
+    silver: "Shruti Thakur",
+    bronze: "Gautami Kulkarni",
   },
 };
 

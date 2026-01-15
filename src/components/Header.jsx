@@ -41,11 +41,15 @@ const Header = () => {
       </a>
 
       <nav
-        className={`${
-          openNavigation ? "flex" : "hidden"
-        } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
-      >
-        <div className="relative z-2 flex flex-col items-center justify-center -translate-x-[10%] gap-8 m-auto lg:flex-row">
+  className={`${
+    openNavigation ? "flex" : "hidden"
+  } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8
+  lg:static lg:flex lg:flex-1 lg:justify-center lg:bg-transparent`}
+>
+
+        <div className="relative z-2 flex flex-col items-center justify-center gap-8
+ lg:flex-row">
+
           {navigation.map((item) => (
             <a
               key={item.id}

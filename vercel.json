@@ -1,28 +1,6 @@
 {
-    "routes" : [
-          {
-            "src": "/",
-            "dest": "/"
-          },
-          {
-            "src": "/team",
-            "dest": "/"
-          },
-          {
-            "src": "/winners",
-            "dest": "/"
-          },
-          {
-            "src": "/register",
-            "dest": "/"
-          },
-          {
-            "src": "/events",
-            "dest": "/"
-          },
-          {
-            "src": "/blogs",
-            "dest": "/"
-          }
-    ]
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
+

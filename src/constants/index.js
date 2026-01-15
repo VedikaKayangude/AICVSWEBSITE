@@ -71,7 +71,7 @@ import workshopthumbnail from "../assets/workshop-thumbnail.jpg";
 export const navigation = [
   { id: "0", title: "Home", url: "/" },
   { id: "1", title: "Events", url: "/events" },
-  { id: "2", title: "LeaderBoard", url: "/winners" },
+  { id: "2", title: "LeaderBoard", url: "/Winners" },
   { id: "3", title: "Blogs", url: "/blogs" },
   { id: "4", title: "Team", url: "/team" },
   { id: "5", title: "Register", url: "/register" },

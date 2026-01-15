@@ -12,7 +12,7 @@ const winnersData = {
   FY: {
     gold: "Shruti Govilkar",
     silver: "Tanvi Nikam",
-    bronze: "Rohan Patil",
+    bronze: "-",
   },
   SY: {
     gold: "Anushkaa Pawar",

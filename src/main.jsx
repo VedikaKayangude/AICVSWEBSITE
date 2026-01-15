@@ -11,6 +11,8 @@ import Footer from "./components/Footer.jsx";
 import Register from "./components/Register.jsx";
 import Events from "./components/Events.jsx";
 import Blog from "./components/Blog.jsx";
+import Winners from "./components/Winners";
+
 
 const router = createBrowserRouter([
   {
@@ -38,7 +40,12 @@ const router = createBrowserRouter([
   {
     path: "/blogs",
     element: <Blog />
-  }
+  },
+  {
+  path: "/winners",
+  element: <Winners />
+},
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -9,6 +9,10 @@
             "dest": "/"
           },
           {
+            "src": "/winners",
+            "dest": "/"
+          },
+          {
             "src": "/register",
             "dest": "/"
           },

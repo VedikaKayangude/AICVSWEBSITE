@@ -7,15 +7,19 @@ import Heading from "./Heading";
 import EventList from "./EventList";
 import { LeftLine, RightLine } from "./design/Pricing";
 import BackgroundLayout from "./BackgroundLayout";
-
+import img2 from "../assets/synapse_lab.jpeg";
+import img1 from "../assets/participants_arrival.png";
+import img3 from "../assets/inaug.png";
+import img4 from "../assets/awards.png";
+import img5 from "../assets/participants.png";
 const synapsePhotos = [
-  { id: 1, src: "/images/Event_img/img1.jpeg", caption: "Opening Ceremony" },
-  { id: 2, src: "/images/Event_img/img2.jpeg", caption: "Workshop Day" },
-  { id: 3, src: "/images/Event_img/img3.jpeg", caption: "Panel Discussion" },
+  { id: 1, src: img1, caption: "Registration" },
+  { id: 2, src: img2, caption: "Hackathon" },
+  { id: 3, src: img3, caption: "Inaugaration" },
   // Adding placeholders for the rest to keep the carousel full
-  { id: 4, src: "/images/Event_img/img1.jpeg", caption: "Team Building" },
-  { id: 5, src: "/images/Event_img/img2.jpeg", caption: "Award Night" },
-  { id: 6, src: "/images/Event_img/img3.jpeg", caption: "Closing Ceremony" },
+  { id: 4, src: "/images/Event_img/img1.jpeg", caption: "Team" },
+  { id: 5, src: img4, caption: "Awards Ceremony" },
+  { id: 6, src: img5, caption: "Mentoring" },
 ];
 
 const SprocketRow = ({ count = 18 }) => (

@@ -55,6 +55,16 @@ const FilmStripCarousel3D = () => {
   const currentRef = useRef(0);
   const rafRef = useRef(null);
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const animate = useCallback(() => {
     const diff = targetRef.current - currentRef.current;
     if (Math.abs(diff) > 0.0001) {
@@ -72,19 +82,28 @@ const FilmStripCarousel3D = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       targetRef.current += 1;
-    }, 2000);                         
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
   const goNext = () => { targetRef.current += 1; };
   const goPrev = () => { targetRef.current -= 1; };
 
+  // 🔥 Responsive transform
   const getFrameStyle = (slotOffset) => {
     const absOffset = Math.abs(slotOffset);
-    const xMove = slotOffset * 400;
-    const rotateY = slotOffset * -20;
-    const zMove = absOffset * -200;
-    const scale = 1.25 - absOffset * 0.4;
+
+    const baseX = isMobile ? 180 : 400;
+    const baseZ = isMobile ? 120 : 200;
+
+    const xMove = slotOffset * baseX;
+    const rotateY = slotOffset * (isMobile ? -12 : -20);
+    const zMove = absOffset * -baseZ;
+
+    const scale = isMobile
+      ? 1 - absOffset * 0.25
+      : 1.25 - absOffset * 0.4;
+
     const opacity = Math.max(0, 1 - absOffset * 0.4);
 
     return {
@@ -99,17 +118,21 @@ const FilmStripCarousel3D = () => {
   return (
     <div
       className="relative w-full overflow-hidden"
-      style={{ height: "600px", marginTop: "20px" }}
-    
+      style={{ height: isMobile ? "350px" : "600px" }}
     >
       <div
         className="absolute inset-0 flex items-center justify-center"
-        style={{ perspective: "1500px", transformStyle: "preserve-3d" }}
+        style={{ perspective: "1200px", transformStyle: "preserve-3d" }}
       >
         {slots.map((slot) => {
-          const fractional = currentRef.current - Math.round(currentRef.current);
+          const fractional =
+            currentRef.current - Math.round(currentRef.current);
           const slotOffset = slot - fractional;
-          const photoIndex = ((Math.round(currentRef.current) + slot) % total + total) % total;
+
+          const photoIndex =
+            ((Math.round(currentRef.current) + slot) % total + total) %
+            total;
+
           const photo = synapsePhotos[photoIndex];
           const isCenter = Math.abs(slotOffset) < 0.1;
           const style = getFrameStyle(slotOffset);
@@ -123,24 +146,42 @@ const FilmStripCarousel3D = () => {
               }}
               className="absolute transition-opacity duration-300"
               style={{
-                width: "420px",
-                height: "280px",
+                width: isMobile ? "260px" : "420px",
+                height: isMobile ? "180px" : "280px",
                 cursor: "pointer",
                 transformStyle: "preserve-3d",
                 ...style,
               }}
             >
-              <div className={`relative w-full h-full rounded-2xl overflow-hidden border transition-all duration-500 
-                ${isCenter ? 'shadow-2xl border-white/40 scale-100' : 'border-white/10 opacity-60'}`}>
+              <div
+                className={`relative w-full h-full rounded-xl overflow-hidden border transition-all duration-500
+                ${
+                  isCenter
+                    ? "shadow-2xl border-white/40"
+                    : "border-white/10 opacity-60"
+                }`}
+              >
                 <img
                   src={photo.src}
                   alt={photo.caption}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
-                  <h3 className={`text-white text-3xl font-black uppercase tracking-tighter transition-all duration-500 
-                    ${isCenter ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-                    {photo.caption.split(' ')[0]}
+
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6 bg-gradient-to-t from-black/60 to-transparent">
+                  <h3
+                    className={`text-white font-black uppercase tracking-tight transition-all duration-500
+                    ${
+                      isMobile
+                        ? "text-lg"
+                        : "text-3xl"
+                    }
+                    ${
+                      isCenter
+                        ? "translate-y-0 opacity-100"
+                        : "translate-y-4 opacity-0"
+                    }`}
+                  >
+                    {photo.caption.split(" ")[0]}
                   </h3>
                 </div>
               </div>
@@ -149,16 +190,17 @@ const FilmStripCarousel3D = () => {
         })}
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-50">
+      {/* Buttons */}
+      <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-50">
         <button
           onClick={goPrev}
-          className="w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 transition-all rounded-full text-white"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white text-sm md:text-base"
         >
           ←
         </button>
         <button
           onClick={goNext}
-          className="w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 transition-all rounded-full text-white"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white text-sm md:text-base"
         >
           →
         </button>
@@ -166,7 +208,6 @@ const FilmStripCarousel3D = () => {
     </div>
   );
 };
-
 // ─── Page ───────────────────────────────────────────────────────────────────
 const Events = () => {
   return (

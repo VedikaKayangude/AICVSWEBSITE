@@ -51,7 +51,7 @@ const synapseWinners = [
     second: {
       team: "GOLD-DIGGERS",
       registeredTeam: "GOLD-DIGGERS",
-      members: ["vaishnavi gaikwad", "shaivi jaiswal", "manjiri kularni"],
+      members: ["Vaishnavi Gaikwad", "Shaivi Jaiswal", "Manjiri Kularni"],
     },
   },
   {

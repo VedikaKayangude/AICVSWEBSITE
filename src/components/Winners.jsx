@@ -1268,7 +1268,7 @@ const CertificateSection = () => {
    MAIN PAGE COMPONENT
 ======================= */
 const Winners = () => {
-  const [activeCompetition, setActiveCompetition] = useState("Kaggle");
+  const [activeCompetition, setActiveCompetition] = useState("Synapse");
   const [activeTab, setActiveTab] = useState("SY");
   const [showConfetti, setShowConfetti] = useState(false);
 
